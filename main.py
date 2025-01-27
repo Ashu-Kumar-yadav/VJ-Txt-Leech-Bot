@@ -145,7 +145,7 @@ async def upload(bot: Client, m: Message):
                         url = re.search(r"(https://.*?playlist.m3u8.*?)\"", text).group(1)
 
             elif 'videos.classplusapp' in url:
-             url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0'}).json()['url']
+             url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI3ODU4OTc0LCJvcmdJZCI6MzcxOSwidHlwZSI6MSwibW9iaWxlIjoiOTE4MTA3NDQyNjIzIiwibmFtZSI6IkFzaG9rIEphbm5pIiwiZW1haWwiOm51bGwsImlzSW50ZXJuYXRpb25hbCI6MCwiZGVmYXVsdExhbmd1YWdlIjoiRU4iLCJjb3VudHJ5Q29kZSI6IklOIiwiY291bnRyeUlTTyI6IjkxIiwidGltZXpvbmUiOiJHTVQrNTozMCIsImlzRGl5Ijp0cnVlLCJvcmdDb2RlIjoibXpzIiwiaXNEaXlTdWJhZG1pbiI6MCwiZmluZ2VycHJpbnRJZCI6IjJiMzAxYzM0Yjg5MWZiYTJhNWNmMmI2MjQwNzY1YTQyIiwiaWF0IjoxNzM3NjQ1OTExLCJleHAiOjE3MzgyNTA3MTF9.zYsPwm8PvSUGkftdm6k-LWogh33M_xnmNAAMuwvFnuCxvaQtNUT3_aK_ulbH3TtO'}).json()['url']
 
             elif '/master.mpd' in url:
              id =  url.split("/")[-2]
